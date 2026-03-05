@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>KHALYL2T6 — TikTok Music Promotion Empire</title>
+<meta name="description" content="Premium TikTok music promotion by KHALYL2T6. 4 active accounts. Real views. Real growth. From $10/video."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Josefin+Sans:wght@100;200;300;400;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ░░ PRELOADER ░░ -->
+<div id="preloader">
+  <div class="pre-wrap">
+    <svg class="pre-emblem" viewBox="0 0 120 84" fill="none">
+      <defs>
+        <linearGradient id="pg1" x1="0" y1="0" x2="120" y2="84" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#f5e0a0"/><stop offset="50%" stop-color="#d4a843"/><stop offset="100%" stop-color="#7a4e10"/>
+        </linearGradient>
+        <filter id="pgf"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- Headphone arc -->
+      <path class="pa-arc" d="M14 68 C14 36 34 8 60 8 C86 8 106 36 106 68" stroke="url(#pg1)" stroke-width="4" stroke-linecap="round" fill="none" filter="url(#pgf)"/>
+      <!-- Left cup -->
+      <rect class="pa-l" x="4"  y="56" width="18" height="30" rx="9" fill="url(#pg1)" filter="url(#pgf)"/>
+      <rect x="8"  y="62" width="10" height="18" rx="5" fill="#02020a" opacity=".9"/>
+      <!-- Right cup -->
+      <rect class="pa-r" x="98" y="56" width="18" height="30" rx="9" fill="url(#pg1)" filter="url(#pgf)"/>
+      <rect x="102" y="62" width="10" height="18" rx="5" fill="#02020a" opacity=".9"/>
+      <!-- K monogram -->
+      <text class="pa-k" x="60" y="58" font-family="Playfair Display" font-size="28" font-weight="700" fill="url(#pg1)" text-anchor="middle" filter="url(#pgf)">K</text>
+    </svg>
+    <div class="pre-bar-outer"><div class="pre-bar-inner" id="preBar"></div></div>
+    <p class="pre-name">KHALYL<span>2T6</span></p>
+  </div>
+</div>
+
+<!-- ░░ CURSOR ░░ -->
+<div id="cur-ring"></div>
+<div id="cur-dot"></div>
+
+<!-- ░░ CANVAS LAYERS ░░ -->
+<canvas id="cv-bg"></canvas>
+<canvas id="cv-fx"></canvas>
+
+<!-- ░░ FILM GRAIN ░░ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ░░ SCROLL PROGRESS ░░ -->
+<div id="scroll-prog"></div>
+
+<!-- ░░ WRAPPER ░░ -->
+<div class="wrap">
+
+<!-- ▓▓ NAVIGATION ▓▓ -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">
+    <svg viewBox="0 0 44 44" fill="none" class="nav-logo-svg">
+      <defs><linearGradient id="nlg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f5e0a0"/><stop offset="100%" stop-color="#b88c30"/></linearGradient></defs>
+      <path d="M6 32C6 18 13 7 22 7C31 7 38 18 38 32" stroke="url(#nlg)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <rect x="2" y="26" width="9" height="16" rx="4.5" fill="url(#nlg)"/>
+      <rect x="33" y="26" width="9" height="16" rx="4.5" fill="url(#nlg)"/>
+      <text x="22" y="29" font-family="Playfair Display" font-size="9" font-weight="700" fill="url(#nlg)" text-anchor="middle">K</text>
+    </svg>
+    <span class="nav-wordmark">KHALYL<em>2T6</em></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#accounts"  class="nl-link" data-text="Accounts">Accounts</a></li>
+    <li><a href="#showcase"  class="nl-link" data-text="Showcase">Showcase</a></li>
+    <li><a href="#pricing"   class="nl-link" data-text="Pricing">Pricing</a></li>
+    <li><a href="#booking"   class="nl-link" data-text="Book Now">Bk Now</a></li>
+    <li><a href="#contact"   class="nl-link" data-text="Contact">Contact</a></li>
+  </ul>
+
+  <a href="#booking" class="nav-cta">
+    <span class="nc-fill"></span>
+    <span class="nc-label">Book Now</span>
+  </a>
+
+  <button class="burger" id="burger-btn" aria-label="Menu" aria-expanded="false">
+    <span class="b-line"></span>
+    <span class="b-line"></span>
+    <span class="b-line"></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mob-menu" aria-hidden="true">
+  <a href="#accounts" class="mob-link">Accounts</a>
+  <a href="#showcase" class="mob-link">Showcase</a>
+  <a href="#pricing"  class="mob-link">Pricing</a>
+  <a href="#booking"  class="mob-link">Book Now</a>
+  <a href="#contact"  class="mob-link">Contact</a>
+  <div class="mob-divider"></div>
+  <div class="mob-socials">
+    <a href="https://www.tiktok.com/@khalyl2t6" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.instagram.com/khalyl2t6" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:khalylvfx@gmail.com">Email</a>
+  </div>
+</div>
+
+<!-- ▓▓ HERO ▓▓ -->
+<section id="hero" class="s-hero">
+  <div class="hero-vline hero-vline--l"></div>
+  <div class="hero-vline hero-vline--r"></div>
+  <div class="hero-hline hero-hline--t"></div>
+
+  <!-- Eyebrow -->
+  <div class="h-eyebrow">
+    <span class="he-dash"></span>
+    <span class="he-pill">TikTok Music Promotion Empire</span>
+    <span class="he-dash"></span>
+  </div>
+
+  <!-- Massive title -->
+  <h1 class="hero-h1" id="hero-h1">
+    <span class="h1-row"><span class="h1-inner">KHALYL</span></span>
+    <span class="h1-row"><span class="h1-inner h1-gold"><em>2T6</em></span></span>
+  </h1>
+
+  <!-- Sub heading -->
+  <div class="hero-sub-wrap">
+    <p class="hero-sub">Four premium TikTok pages. <strong>Real audience. Real growth.</strong><br/>Your music — posted within <strong>24 hours.</strong></p>
+    <div class="hero-acts">
+      <a href="#booking" class="btn-prime">
+        <div class="bp-bg"></div>
+        <span class="bp-label">Start Promotion</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-arrow"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div class="bp-particles"></div>
+      </a>
+      <a href="#accounts" class="btn-ghost">
+        <span>View Accounts</span>
+        <span class="bg-arr">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating headphone emblem -->
+  <div class="hero-emblem" id="heroEmblem">
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="heg1" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#f5e0a0" stop-opacity=".9"/>
+          <stop offset="45%" stop-color="#d4a843" stop-opacity=".75"/>
+          <stop offset="100%" stop-color="#4a2800" stop-opacity=".6"/>
+        </linearGradient>
+        <linearGradient id="heg2" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#00e5ff" stop-opacity=".2"/>
+          <stop offset="100%" stop-color="#d4a843" stop-opacity=".4"/>
+        </linearGradient>
+        <radialGradient id="heGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#d4a843" stop-opacity=".15"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </radialGradient>
+        <filter id="hef1"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="hef2"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- Outer rings -->
+      <circle cx="200" cy="150" r="140" stroke="rgba(212,168,67,.06)" stroke-width="1" stroke-dasharray="5 12"/>
+      <circle cx="200" cy="150" r="120" stroke="rgba(212,168,67,.04)" stroke-width=".6"/>
+      <!-- Glow blob -->
+      <ellipse cx="200" cy="150" rx="110" ry="90" fill="url(#heGlow)"/>
+      <!-- Main arc -->
+      <path d="M46 178 C46 88 114 18 200 18 C286 18 354 88 354 178" stroke="url(#heg1)" stroke-width="7" stroke-linecap="round" fill="none" filter="url(#hef1)"/>
+      <!-- Thin highlight -->
+      <path d="M76 172 C76 102 132 48 200 48 C268 48 324 102 324 172" stroke="url(#heg2)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".6"/>
+      <!-- Left cup body -->
+      <rect x="26" y="158" width="36" height="58" rx="18" fill="url(#heg1)" filter="url(#hef1)"/>
+      <rect x="34" y="168" width="20" height="38" rx="10" fill="#02020a" opacity=".88"/>
+      <rect x="39" y="175" width="10" height="5" rx="2.5" fill="url(#heg1)" opacity=".7"/>
+      <rect x="39" y="185" width="7" height="2" rx="1" fill="url(#heg1)" opacity=".35"/>
+      <rect x="39" y="191" width="5" height="2" rx="1" fill="url(#heg1)" opacity=".2"/>
+      <!-- Right cup body -->
+      <rect x="338" y="158" width="36" height="58" rx="18" fill="url(#heg1)" filter="url(#hef1)"/>
+      <rect x="346" y="168" width="20" height="38" rx="10" fill="#02020a" opacity=".88"/>
+      <rect x="351" y="175" width="10" height="5" rx="2.5" fill="url(#heg1)" opacity=".7"/>
+      <rect x="351" y="185" width="7" height="2" rx="1" fill="url(#heg1)" opacity=".35"/>
+      <rect x="351" y="191" width="5" height="2" rx="1" fill="url(#heg1)" opacity=".2"/>
+      <!-- Center K monogram -->
+      <text x="200" y="158" font-family="Playfair Display" font-size="64" font-weight="700" fill="url(#heg1)" text-anchor="middle" filter="url(#hef1)">K</text>
+      <!-- 2T6 sub-text -->
+      <text x="200" y="186" font-family="Josefin Sans" font-size="16" font-weight="300" fill="url(#heg1)" text-anchor="middle" letter-spacing="10" opacity=".65">2T6</text>
+      <!-- Horizontal decorative lines -->
+      <line x1="118" y1="200" x2="156" y2="200" stroke="rgba(212,168,67,.3)" stroke-width="1"/>
+      <circle cx="200" cy="200" r="4" fill="rgba(212,168,67,.45)"/>
+      <line x1="244" y1="200" x2="282" y2="200" stroke="rgba(212,168,67,.3)" stroke-width="1"/>
+      <!-- Neon accent dots -->
+      <circle cx="54" cy="152" r="4" fill="#00e5ff" filter="url(#hef2)" opacity=".7"/>
+      <circle cx="346" cy="152" r="4" fill="#00e5ff" filter="url(#hef2)" opacity=".7"/>
+      <!-- Bottom tag -->
+      <text x="200" y="248" font-family="DM Mono" font-size="8" fill="url(#heg1)" text-anchor="middle" letter-spacing="8" opacity=".4">MUSIC PROMOTION</text>
+    </svg>
+  </div>
+
+  <!-- Corner stat -->
+  <div class="hero-corner-stat rv d5">
+    <div class="hcs-ring">
+      <svg viewBox="0 0 90 90"><circle cx="45" cy="45" r="40" stroke="rgba(212,168,67,.12)" stroke-width="1" fill="none"/><circle cx="45" cy="45" r="32" stroke="rgba(212,168,67,.06)" stroke-width="1" stroke-dasharray="3 6" fill="none"/></svg>
+    </div>
+    <div class="hcs-inner">
+      <span class="hcs-num"><span class="cu" data-t="500">0</span>+</span>
+      <span class="hcs-lbl">Tracks<br/>Promoted</span>
+    </div>
+  </div>
+
+  <!-- Scroll line -->
+  <div class="hero-scroll-cue">
+    <div class="hsc-label">Scroll</div>
+    <div class="hsc-line"><div class="hsc-drop"></div></div>
+  </div>
+</section>
+
+<!-- ▓▓ TICKER ▓▓ -->
+<div class="ticker-band">
+  <div class="tk-track">
+    <span class="tk-item"><span class="tk-gem"></span>KHALYL 2T6</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>TikTok Promotion</em></span>
+    <span class="tk-item"><span class="tk-gem"></span>@khalyl2t6</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>Real Views. Real Growth.</em></span>
+    <span class="tk-item"><span class="tk-gem"></span>From $10 / Video</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>4 Premium Accounts</em></span>
+    <span class="tk-item"><span class="tk-gem"></span>khalylvfx@gmail.com</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>500+ Tracks Promoted</em></span>
+    <span class="tk-item"><span class="tk-gem"></span>KHALYL 2T6</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>TikTok Promotion</em></span>
+    <span class="tk-item"><span class="tk-gem"></span>@khalyl2t6</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>Real Views. Real Growth.</em></span>
+    <span class="tk-item"><span class="tk-gem"></span>From $10 / Video</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>4 Premium Accounts</em></span>
+    <span class="tk-item"><span class="tk-gem"></span>khalylvfx@gmail.com</span>
+    <span class="tk-item"><span class="tk-gem"></span><em>500+ Tracks Promoted</em></span>
+  </div>
+</div>
+
+<!-- ▓▓ STATS ▓▓ -->
+<section id="stats" class="s-stats">
+  <div class="stats-grid">
+    <div class="stat-cell rv">
+      <div class="sc-topline"></div>
+      <div class="stat-ring-wrap">
+        <svg viewBox="0 0 72 72" width="72" height="72"><circle class="ring-bg" cx="36" cy="36" r="30"/><circle class="ring-fg" cx="36" cy="36" r="30" data-pct="92"/></svg>
+        <div class="srw-num"><span class="cu" data-t="500">0</span></div>
+      </div>
+      <p class="stat-lbl">Tracks Promoted</p>
+      <p class="stat-sub">and growing every week</p>
+    </div>
+    <div class="stat-cell rv d2">
+      <div class="sc-topline"></div>
+      <div class="stat-ring-wrap">
+        <svg viewBox="0 0 72 72" width="72" height="72"><circle class="ring-bg" cx="36" cy="36" r="30"/><circle class="ring-fg" cx="36" cy="36" r="30" data-pct="96"/></svg>
+        <div class="srw-num"><span class="cu" data-t="50">0</span>M</div>
+      </div>
+      <p class="stat-lbl">Total Views</p>
+      <p class="stat-sub">across all 4 accounts</p>
+    </div>
+    <div class="stat-cell rv d3">
+      <div class="sc-topline"></div>
+      <div class="stat-ring-wrap">
+        <svg viewBox="0 0 72 72" width="72" height="72"><circle class="ring-bg" cx="36" cy="36" r="30"/><circle class="ring-fg" cx="36" cy="36" r="30" data-pct="100"/></svg>
+        <div class="srw-num">4</div>
+      </div>
+      <p class="stat-lbl">Active Accounts</p>
+      <p class="stat-sub">premium &amp; standard tiers</p>
+    </div>
+    <div class="stat-cell rv d4">
+      <div class="sc-topline"></div>
+      <div class="stat-ring-wrap">
+        <svg viewBox="0 0 72 72" width="72" height="72"><circle class="ring-bg" cx="36" cy="36" r="30"/><circle class="ring-fg" cx="36" cy="36" r="30" data-pct="78"/></svg>
+        <div class="srw-num">24H</div>
+      </div>
+      <p class="stat-lbl">Turnaround</p>
+      <p class="stat-sub">from payment to post</p>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ ACCOUNTS ▓▓ -->
+<section id="accounts" class="s-accounts sec">
+  <div class="sec-header">
+    <div class="sec-tag rv"><span class="st-line"></span><span class="st-num">01</span>Our Accounts<span class="st-line"></span></div>
+    <h2 class="sec-h rv d2">Four Pages.<br/><em>One Empire.</em></h2>
+    <div class="gold-line"></div>
+    <p class="sec-sub rv d3">Click any card to open the live TikTok account. Verify the audience yourself before booking.</p>
+  </div>
+
+  <div class="acc-grid">
+
+    <a href="https://www.tiktok.com/@khalyl2t6" target="_blank" rel="noopener" class="acc-card rv">
+      <div class="acc-glow-line"></div>
+      <div class="acc-corner-glyph">K</div>
+      <div class="acc-badge-prem">★ Premium</div>
+      <div class="acc-icon-box">
+        <svg viewBox="0 0 24 24" fill="#d4a843"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.25 8.25 0 004.84 1.55V6.75a4.85 4.85 0 01-1.07-.06z"/></svg>
+      </div>
+      <div class="acc-live"><span class="acc-dot"></span>Live</div>
+      <h3 class="acc-handle">@khalyl2t6</h3>
+      <div class="acc-price"><span class="ap-sign">$</span><span class="ap-num">15</span><span class="ap-unit">/video</span></div>
+      <div class="acc-divider"></div>
+      <p class="acc-desc">Main channel. Maximum reach. Your track placed in front of the largest audience.</p>
+      <div class="acc-visit">
+        <span>Visit Account</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+    </a>
+
+    <a href="https://www.tiktok.com/@futt_aysx" target="_blank" rel="noopener" class="acc-card rv d2">
+      <div class="acc-glow-line"></div>
+      <div class="acc-corner-glyph">F</div>
+      <div class="acc-icon-box">
+        <svg viewBox="0 0 24 24" fill="#d4a843"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.25 8.25 0 004.84 1.55V6.75a4.85 4.85 0 01-1.07-.06z"/></svg>
+      </div>
+      <div class="acc-live"><span class="acc-dot"></span>Live</div>
+      <h3 class="acc-handle">@futt_aysx</h3>
+      <div class="acc-price"><span class="ap-sign">$</span><span class="ap-num">12</span><span class="ap-unit">/video</span></div>
+      <div class="acc-divider"></div>
+      <p class="acc-desc">Standard tier. Consistent daily posting with a loyal, engaged football-edit audience.</p>
+      <div class="acc-visit">
+        <span>Visit Account</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+    </a>
+
+    <a href="https://www.tiktok.com/@m7_10r" target="_blank" rel="noopener" class="acc-card rv d3">
+      <div class="acc-glow-line"></div>
+      <div class="acc-corner-glyph">M</div>
+      <div class="acc-badge-prem">★ Premium</div>
+      <div class="acc-icon-box">
+        <svg viewBox="0 0 24 24" fill="#d4a843"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.25 8.25 0 004.84 1.55V6.75a4.85 4.85 0 01-1.07-.06z"/></svg>
+      </div>
+      <div class="acc-live"><span class="acc-dot"></span>Live</div>
+      <h3 class="acc-handle">@m7_10r</h3>
+      <div class="acc-price"><span class="ap-sign">$</span><span class="ap-num">15</span><span class="ap-unit">/video</span></div>
+      <div class="acc-divider"></div>
+      <p class="acc-desc">Premium second channel. Deep engagement rates. Artists see strong organic reach every post.</p>
+      <div class="acc-visit">
+        <span>Visit Account</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+    </a>
+
+    <a href="https://www.tiktok.com/@d4belx5" target="_blank" rel="noopener" class="acc-card rv d4">
+      <div class="acc-glow-line"></div>
+      <div class="acc-corner-glyph">D</div>
+      <div class="acc-icon-box">
+        <svg viewBox="0 0 24 24" fill="#d4a843"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.25 8.25 0 004.84 1.55V6.75a4.85 4.85 0 01-1.07-.06z"/></svg>
+      </div>
+      <div class="acc-live"><span class="acc-dot"></span>Live</div>
+      <h3 class="acc-handle">@d4belx5</h3>
+      <div class="acc-price"><span class="ap-sign">$</span><span class="ap-num">12</span><span class="ap-unit">/video</span></div>
+      <div class="acc-divider"></div>
+      <p class="acc-desc">Active standard page. A reliable platform to reach new audiences day after day.</p>
+      <div class="acc-visit">
+        <span>Visit Account</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ▓▓ IPHONE SHOWCASE ▓▓ -->
+<section id="showcase" class="s-showcase sec">
+  <div class="sec-header sec-header--center">
+    <div class="sec-tag rv"><span class="st-line"></span><span class="st-num">02</span>Live Showcase<span class="st-line"></span></div>
+    <h2 class="sec-h rv d2">Your Track.<br/><em>Their Screens.</em></h2>
+    <div class="gold-line" style="margin:26px auto;"></div>
+    <p class="sec-sub rv d3">Exactly how your music appears — presented to real engaged viewers.</p>
+  </div>
+
+  <div class="phones-stage">
+
+    <!-- Phone 1 -->
+    <div class="phone-pod rv d1" id="pod1">
+      <div class="pod-ball pod-ball--gold">
+        <svg viewBox="0 0 90 90"><defs><radialGradient id="fbg1" cx="35%" cy="30%"><stop offset="0%" stop-color="#fef3c7"/><stop offset="55%" stop-color="#d97706"/><stop offset="100%" stop-color="#451a03"/></radialGradient><filter id="fbf1"><feGaussianBlur stdDeviation="3"/></filter></defs><circle cx="45" cy="45" r="38" fill="url(#fbg1)" filter="url(#fbf1)"/><ellipse cx="45" cy="45" rx="10" ry="38" stroke="rgba(0,0,0,.25)" stroke-width="1.2" fill="none"/><line x1="7" y1="45" x2="83" y2="45" stroke="rgba(0,0,0,.2)" stroke-width="1"/><path d="M18 26 Q45 16 72 26" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M14 36 Q45 24 76 36" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M14 54 Q45 66 76 54" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M18 64 Q45 74 72 64" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><circle cx="45" cy="45" r="38" stroke="rgba(251,191,36,.5)" stroke-width="1.8" fill="none"/></svg>
+      </div>
+      <div class="iphone" id="iphone1" data-phone="1">
+        <div class="iph-vol iph-vol--up"></div>
+        <div class="iph-vol iph-vol--dn1"></div>
+        <div class="iph-vol iph-vol--dn2"></div>
+        <div class="iph-pwr"></div>
+        <div class="iph-screen">
+          <div class="iph-island"></div>
+          <!-- TikTok content - gold theme -->
+          <div class="tt-ui tt-ui--gold">
+            <div class="tt-videobg"></div>
+            <!-- Top badge -->
+            <div class="tt-top-badge">Football Edit Page</div>
+            <!-- Right actions -->
+            <div class="tt-actions">
+              <div class="tt-act"><div class="tt-act-i">♥</div><span>24.8K</span></div>
+              <div class="tt-act"><div class="tt-act-i">💬</div><span>1.2K</span></div>
+              <div class="tt-act"><div class="tt-act-i">↗</div><span>8.4K</span></div>
+              <div class="tt-act"><div class="tt-disc"><span></span></div></div>
+            </div>
+            <!-- Bottom info -->
+            <div class="tt-bottom">
+              <div class="tt-row">
+                <div class="tt-ava tt-ava--gold">K</div>
+                <div class="tt-meta">
+                  <div class="tt-un">@khalyl2t6</div>
+                  <div class="tt-pr-badge">$15 / video</div>
+                </div>
+                <div class="tt-follow-btn">Follow</div>
+              </div>
+              <div class="tt-bars">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="iph-glare"></div>
+        </div>
+        <div class="iph-bar"></div>
+      </div>
+      <div class="pod-label">
+        <span class="pdl-badge pdl-badge--prem">★ PREMIUM</span>
+        <span class="pdl-name">@khalyl2t6</span>
+        <span class="pdl-price">$15 / video</span>
+      </div>
+    </div>
+
+    <!-- Phone 2 — CENTER featured -->
+    <div class="phone-pod phone-pod--hero rv d2" id="pod2">
+      <div class="pod-ball pod-ball--cyan">
+        <svg viewBox="0 0 90 90"><defs><radialGradient id="fbg2" cx="35%" cy="30%"><stop offset="0%" stop-color="#a5f3fc"/><stop offset="55%" stop-color="#0891b2"/><stop offset="100%" stop-color="#0c4a6e"/></radialGradient></defs><circle cx="45" cy="45" r="38" fill="url(#fbg2)"/><ellipse cx="45" cy="45" rx="10" ry="38" stroke="rgba(0,0,0,.25)" stroke-width="1.2" fill="none"/><line x1="7" y1="45" x2="83" y2="45" stroke="rgba(0,0,0,.2)" stroke-width="1"/><path d="M18 26 Q45 16 72 26" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M14 36 Q45 24 76 36" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M14 54 Q45 66 76 54" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M18 64 Q45 74 72 64" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><circle cx="45" cy="45" r="38" stroke="rgba(34,211,238,.5)" stroke-width="1.8" fill="none"/></svg>
+      </div>
+      <div class="iphone iphone--hero" id="iphone2" data-phone="2">
+        <div class="iph-vol iph-vol--up"></div>
+        <div class="iph-vol iph-vol--dn1"></div>
+        <div class="iph-vol iph-vol--dn2"></div>
+        <div class="iph-pwr"></div>
+        <div class="iph-screen">
+          <div class="iph-island"></div>
+          <div class="tt-ui tt-ui--cyan">
+            <div class="tt-videobg"></div>
+            <div class="tt-top-badge">Football Edit Page</div>
+            <div class="tt-actions">
+              <div class="tt-act"><div class="tt-act-i">♥</div><span>61.3K</span></div>
+              <div class="tt-act"><div class="tt-act-i">💬</div><span>3.7K</span></div>
+              <div class="tt-act"><div class="tt-act-i">↗</div><span>19K</span></div>
+              <div class="tt-act"><div class="tt-disc tt-disc--c"><span></span></div></div>
+            </div>
+            <div class="tt-bottom">
+              <div class="tt-row">
+                <div class="tt-ava tt-ava--cyan">M</div>
+                <div class="tt-meta">
+                  <div class="tt-un">@m7_10r</div>
+                  <div class="tt-pr-badge tt-pr-badge--cyan">$15 / video</div>
+                </div>
+                <div class="tt-follow-btn tt-follow-btn--gold">Follow</div>
+              </div>
+              <div class="tt-bars">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="iph-glare"></div>
+        </div>
+        <div class="iph-bar"></div>
+      </div>
+      <div class="pod-label">
+        <span class="pdl-badge pdl-badge--prem">★ PREMIUM</span>
+        <span class="pdl-name">@m7_10r</span>
+        <span class="pdl-price">$15 / video</span>
+      </div>
+    </div>
+
+    <!-- Phone 3 -->
+    <div class="phone-pod rv d3" id="pod3">
+      <div class="pod-ball pod-ball--green">
+        <svg viewBox="0 0 90 90"><defs><radialGradient id="fbg3" cx="35%" cy="30%"><stop offset="0%" stop-color="#bbf7d0"/><stop offset="55%" stop-color="#16a34a"/><stop offset="100%" stop-color="#052e16"/></radialGradient></defs><circle cx="45" cy="45" r="38" fill="url(#fbg3)"/><ellipse cx="45" cy="45" rx="10" ry="38" stroke="rgba(0,0,0,.25)" stroke-width="1.2" fill="none"/><line x1="7" y1="45" x2="83" y2="45" stroke="rgba(0,0,0,.2)" stroke-width="1"/><path d="M18 26 Q45 16 72 26" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M14 36 Q45 24 76 36" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M14 54 Q45 66 76 54" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><path d="M18 64 Q45 74 72 64" stroke="rgba(0,0,0,.15)" stroke-width="1" fill="none"/><circle cx="45" cy="45" r="38" stroke="rgba(74,222,128,.5)" stroke-width="1.8" fill="none"/></svg>
+      </div>
+      <div class="iphone" id="iphone3" data-phone="3">
+        <div class="iph-vol iph-vol--up"></div>
+        <div class="iph-vol iph-vol--dn1"></div>
+        <div class="iph-vol iph-vol--dn2"></div>
+        <div class="iph-pwr"></div>
+        <div class="iph-screen">
+          <div class="iph-island"></div>
+          <div class="tt-ui tt-ui--green">
+            <div class="tt-videobg"></div>
+            <div class="tt-top-badge">Football Edit Page</div>
+            <div class="tt-actions">
+              <div class="tt-act"><div class="tt-act-i">♥</div><span>18.5K</span></div>
+              <div class="tt-act"><div class="tt-act-i">💬</div><span>890</span></div>
+              <div class="tt-act"><div class="tt-act-i">↗</div><span>4.1K</span></div>
+              <div class="tt-act"><div class="tt-disc"><span></span></div></div>
+            </div>
+            <div class="tt-bottom">
+              <div class="tt-row">
+                <div class="tt-ava tt-ava--green">F</div>
+                <div class="tt-meta">
+                  <div class="tt-un">@futt_aysx</div>
+                  <div class="tt-pr-badge tt-pr-badge--green">$12 / video</div>
+                </div>
+                <div class="tt-follow-btn">Follow</div>
+              </div>
+              <div class="tt-bars">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="iph-glare"></div>
+        </div>
+        <div class="iph-bar"></div>
+      </div>
+      <div class="pod-label">
+        <span class="pdl-badge">STANDARD</span>
+        <span class="pdl-name">@futt_aysx</span>
+        <span class="pdl-price">$12 / video</span>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="showcase-hint rv">Move your cursor over each phone to tilt in 3D</p>
+</section>
+
+<!-- ▓▓ PRICING ▓▓ -->
+<section id="pricing" class="s-pricing sec">
+  <div class="sec-header sec-header--center">
+    <div class="sec-tag rv"><span class="st-line"></span><span class="st-num">03</span>Pricing<span class="st-line"></span></div>
+    <h2 class="sec-h rv d2">Transparent.<br/><em>Zero Surprises.</em></h2>
+    <div class="gold-line" style="margin:26px auto;"></div>
+    <p class="sec-sub rv d3">Flat rates. No hidden fees. No contracts. Just results.</p>
+  </div>
+
+  <div class="price-grid">
+
+    <div class="price-card rv">
+      <div class="pc-holo"></div>
+      <div class="pc-tier"><span class="pct-diamond"></span>Standard</div>
+      <h3 class="pc-name">Standard<br/>Promotion</h3>
+      <div class="pc-price-row"><sup>$</sup><span class="pcpr-num">12</span></div>
+      <div class="pc-per">per video</div>
+      <div class="pc-sep"></div>
+      <ul class="pc-features">
+        <li><span class="pcf-check">✓</span>Accounts: @futt_aysx &amp; @d4belx5</li>
+        <li><span class="pcf-check">✓</span>Posted within 24 hours</li>
+        <li><span class="pcf-check">✓</span>Real organic audience</li>
+        <li><span class="pcf-check">✓</span>Your link included</li>
+        <li><span class="pcf-check">✓</span>Direct communication</li>
+      </ul>
+      <a href="#booking" class="btn-outline"><div class="bo-fill"></div><span class="bo-label">Book Standard</span></a>
+    </div>
+
+    <div class="price-card price-card--featured rv d2">
+      <div class="pc-holo"></div>
+      <div class="pc-feat-badge">Most Popular</div>
+      <div class="pc-tier"><span class="pct-diamond"></span>Premium</div>
+      <h3 class="pc-name">Premium<br/>Promotion</h3>
+      <div class="pc-price-row"><sup>$</sup><span class="pcpr-num">15</span></div>
+      <div class="pc-per">per video</div>
+      <div class="pc-sep"></div>
+      <ul class="pc-features">
+        <li><span class="pcf-check">✓</span>Accounts: @khalyl2t6 &amp; @m7_10r</li>
+        <li><span class="pcf-check">✓</span>Priority posting — 12h max</li>
+        <li><span class="pcf-check">✓</span>Largest engaged audience</li>
+        <li><span class="pcf-check">✓</span>Your link included</li>
+        <li><span class="pcf-check">✓</span>Performance update sent</li>
+        <li><span class="pcf-check">✓</span>VIP direct access</li>
+      </ul>
+      <a href="#booking" class="btn-prime" style="width:100%;justify-content:center">
+        <div class="bp-bg"></div>
+        <span class="bp-label">Book Premium</span>
+        <div class="bp-particles"></div>
+      </a>
+    </div>
+
+    <div class="price-card rv d4">
+      <div class="pc-holo"></div>
+      <div class="pc-tier"><span class="pct-diamond"></span>Bulk</div>
+      <h3 class="pc-name">Full<br/>Campaign</h3>
+      <div class="pc-price-row"><sup>$</sup><span class="pcpr-num">10</span></div>
+      <div class="pc-per">per video · 5+ videos</div>
+      <div class="pc-sep"></div>
+      <ul class="pc-features">
+        <li><span class="pcf-check">✓</span>All 4 accounts included</li>
+        <li><span class="pcf-check">✓</span>Minimum 5 videos total</li>
+        <li><span class="pcf-check">✓</span>Maximum platform coverage</li>
+        <li><span class="pcf-check">✓</span>Custom posting schedule</li>
+        <li><span class="pcf-check">✓</span>Full analytics summary</li>
+      </ul>
+      <a href="#booking" class="btn-outline"><div class="bo-fill"></div><span class="bo-label">Book Campaign</span></a>
+    </div>
+
+  </div>
+
+  <div class="price-note rv">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#d4a843" stroke-width="1"/><path d="M14 8v8M14 19v2" stroke="#d4a843" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <p>Book <strong>5+ videos across all 4 accounts</strong> and every video drops to <strong>$10 flat</strong> — regardless of tier.</p>
+  </div>
+</section>
+<form action="https://formspree.io/f/xpqyarkw" method="POST">
+<!-- ▓▓ BOOKING ▓▓ -->
+<section id="booking" class="s-booking sec">
+  <div class="booking-layout">
+
+    <!-- Left: info -->
+    <div class="bk-left rvl">
+      <div class="sec-tag"><span class="st-line"></span><span class="st-num">04</span>Book Now<span class="st-line"></span></div>
+      <h2 class="sec-h">Enter<br/>the Circle.<br/><em>We Handle<br/>Everything.</em></h2>
+      <div class="gold-line"></div>
+      <p class="bk-desc">Submit your details. Khalyl reviews every request personally and responds within hours — never days.</p>
+
+      <div class="bk-pillars">
+        <div class="bk-pillar rvl d2">
+          <div class="bkp-num">01</div>
+          <div><p class="bkp-title">Real Organic Accounts</p><p class="bkp-body">Zero bots. Every view comes from a real person who chose to follow us.</p></div>
+        </div>
+        <div class="bk-pillar rvl d3">
+          <div class="bkp-num">02</div>
+          <div><p class="bkp-title">24-Hour Turnaround</p><p class="bkp-body">Confirmed — posted. Your track goes live within 24 hours of payment.</p></div>
+        </div>
+        <div class="bk-pillar rvl d4">
+          <div class="bkp-num">03</div>
+          <div><p class="bkp-title">Direct Communication</p><p class="bkp-body">No middlemen. You deal with Khalyl directly, every single time.</p></div>
+        </div>
+      </div>
+
+      <div class="bk-contact rvl d5">
+        <a href="https://www.instagram.com/khalilopp1" target="_blank" class="bkc-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @khalilopp1
+        </a>
+        <a href="mailto:khalylvfx@gmail.com" class="bkc-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          khalylvfx@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: glass book form -->
+    <div class="bk-right rvr">
+      <div class="glass-book">
+        <div class="gb-spine"></div>
+        <div class="gb-pages">
+          <!-- Page 1: decorative info -->
+          <div class="gb-page gb-page--info">
+            <div class="gbpi-watermark">K</div>
+            <div class="gbpi-content">
+              <p class="gbpi-heading">Submission<br/>Portal</p>
+              <div class="gbpi-seal">
+                <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" stroke="rgba(212,168,67,.2)" stroke-width="1" fill="none" stroke-dasharray="4 6"/><circle cx="40" cy="40" r="28" stroke="rgba(212,168,67,.12)" stroke-width="1" fill="none"/><text x="40" y="35" font-family="Playfair Display" font-size="14" font-weight="700" fill="#d4a843" text-anchor="middle">K</text><text x="40" y="47" font-family="DM Mono" font-size="5" fill="#d4a843" text-anchor="middle" letter-spacing="2">2T6</text></svg>
+              </div>
+              <ul class="gbpi-list">
+                <li>Real accounts only</li>
+                <li>24h turnaround</li>
+                <li>Direct contact</li>
+                <li>Guaranteed post</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Page 2: the actual form -->
+          <div class="gb-page gb-page--form">
+            <div class="gbpf-header">
+              <span class="gbpf-tag">Track Submission</span>
+              <div class="gbpf-dots"><span class="gbd a"></span><span class="gbd"></span><span class="gbd"></span></div>
+            </div>
+            <form id="bookForm" class="book-form" novalidate>
+              <div class="bf-row2">
+                <div class="bf-field">
+                  <input class="bf-input" type="text" id="bf-name" name="name" required placeholder=" "/>
+                  <label class="bf-label" for="bf-name">FuLL Name</label>
+                  <div class="bf-underline"></div>
+                </div>
+                <div class="bf-field">
+                  <input class="bf-input" type="text" id="bf-user" name="username" required placeholder=" "/>
+                  <label class="bf-label" for="bf-user">Username</label>
+                  <div class="bf-underline"></div>
+                </div>
+              </div>
+              <div class="bf-field">
+                <input class="bf-input" type="email" id="bf-email" name="email" required placeholder=" "/>
+                <label class="bf-label" for="bf-email">Email Address</label>
+                <div class="bf-underline"></div>
+              </div>
+              <div class="bf-field bf-field--at">
+                <span class="bf-at-prefix">@</span>
+                <input class="bf-input bf-input--at" type="text" id="bf-insta" name="instagram" required placeholder=" "/>
+                <label class="bf-label bf-label--at" for="bf-insta">Instagram Username</label>
+                <div class="bf-underline"></div>
+              </div>
+              <div class="bf-row2">
+                <div class="bf-field">
+                  <input class="bf-input" type="text" id="bf-song" name="song" required placeholder=" "/>
+                  <label class="bf-label" for="bf-song">Song Name</label>
+                  <div class="bf-underline"></div>
+                </div>
+                <div class="bf-field">
+                  <input class="bf-input" type="url" id="bf-link" name="link" required placeholder=" "/>
+                  <label class="bf-label" for="bf-link">Song Link</label>
+                  <div class="bf-underline"></div>
+                </div>
+              </div>
+
+              <!-- Account selector -->
+              <div class="bf-accounts">
+                <p class="bfa-title">Select Account(s)</p>
+                <div class="bfa-grid">
+                  <label class="bfa-item">
+                    <input type="checkbox" name="accounts" value="khalyl2t6" data-price="15"/>
+                    <span class="bfa-box"><span class="bfa-check">✓</span></span>
+                    <span class="bfa-text">@khalyl2t6 — <strong>$15</strong> Premium</span>
+                  </label>
+                  <label class="bfa-item">
+                    <input type="checkbox" name="accounts" value="futt_aysx" data-price="12"/>
+                    <span class="bfa-box"><span class="bfa-check">✓</span></span>
+                    <span class="bfa-text">@futt_aysx — <strong>$12</strong> Standard</span>
+                  </label>
+                  <label class="bfa-item">
+                    <input type="checkbox" name="accounts" value="m7_10r" data-price="15"/>
+                    <span class="bfa-box"><span class="bfa-check">✓</span></span>
+                    <span class="bfa-text">@m7_10r — <strong>$15</strong> Premium</span>
+                  </label>
+                  <label class="bfa-item">
+                    <input type="checkbox" name="accounts" value="d4belx5" data-price="12"/>
+                    <span class="bfa-box"><span class="bfa-check">✓</span></span>
+                    <span class="bfa-text">@d4belx5 — <strong>$12</strong> Standard</span>
+                  </label>
+                </div>
+                <div class="bfa-total">
+                  <span class="bfat-lbl">Estimated Total</span>
+                  <span class="bfat-price" id="bfatPrice">$0</span>
+                  <span class="bfat-bulk" id="bfatBulk">★ Bulk $10/video</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-prime bf-submit">
+                <div class="bp-bg"></div>
+                <span class="bp-label">Send Request</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                <div class="bp-particles"></div>
+              </button>
+
+              <div id="formSuccess" class="form-success">
+                <svg class="fs-svg" viewBox="0 0 60 60"><circle cx="30" cy="30" r="27" stroke="#d4a843" stroke-width="1.5" fill="none" stroke-dasharray="170" stroke-dashoffset="170" class="fss-ring"/><path d="M17 30 L25 38 L43 20" stroke="#d4a843" stroke-width="2.5" stroke-linecap="round" fill="none" stroke-dasharray="35" stroke-dashoffset="35" class="fss-check"/></svg>
+                <p class="fs-title">Request Received!</p>
+                <p class="fs-body">Khalyl will reach out within 24 hours. Check your email and Instagram DMs.</p>
+                <a href="https://www.instagram.com/khalilopp1" target="_blank" class="fs-link">DM on Instagram for faster reply →</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</form>
+
+
+<!-- ▓▓ CONTACT ▓▓ -->
+<section id="contact" class="s-contact sec">
+  <div class="contact-grid">
+    <div class="cg-left">
+      <div class="sec-tag rv"><span class="st-line"></span><span class="st-num">05</span>Contact<span class="st-line"></span></div>
+      <h2 class="sec-h rv d2">Let's Make<br/><em>Your Music</em><br/>Go Viral.</h2>
+      <div class="gold-line"></div>
+      <p class="contact-desc rv d3">Every message gets a reply. We work with rising artists and established names. Reach out on any platform.</p>
+
+      <div class="ch-list rv d4">
+        <a href="https://www.tiktok.com/@khalyl2t6" target="_blank" rel="noopener" class="ch-link">
+          <div class="chl-icon"><svg viewBox="0 0 24 24" fill="#d4a843"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.25 8.25 0 004.84 1.55V6.75a4.85 4.85 0 01-1.07-.06z"/></svg></div>
+          <div class="chl-text"><span class="chl-lbl">TikTok</span><span class="chl-val">@khalyl2t6</span></div>
+          <div class="chl-arr">↗</div>
+        </a>
+        <a href="https://www.instagram.com/khalilopp1" target="_blank" rel="noopener" class="ch-link">
+          <div class="chl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#d4a843" stroke="none"/></svg></div>
+          <div class="chl-text"><span class="chl-lbl">Instagram</span><span class="chl-val">@khalilopp1</span></div>
+          <div class="chl-arr">↗</div>
+        </a>
+        <a href="mailto:khalylvfx@gmail.com" class="ch-link">
+          <div class="chl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
+          <div class="chl-text"><span class="chl-lbl">Email</span><span class="chl-val">khalylvfx@gmail.com</span></div>
+          <div class="chl-arr">↗</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="cg-right rv d3">
+      <div class="cq-card">
+        <div class="cqc-glow"></div>
+        <p class="cqc-pre">Ready to start?</p>
+        <h3 class="cqc-title">Book in<br/>60 seconds.</h3>
+        <p class="cqc-body">No onboarding. No setup. Just your song link and we handle everything.</p>
+        <ol class="cqc-steps">
+          <li><span class="cqs-n">01</span>Fill the form above</li>
+          <li><span class="cqs-n">02</span>Confirm via DM or email</li>
+          <li><span class="cqs-n">03</span>Go live within 24h</li>
+        </ol>
+        <a href="#booking" class="btn-prime" style="margin-top:32px;display:inline-flex">
+          <div class="bp-bg"></div>
+          <span class="bp-label">Book Now</span>
+          <div class="bp-particles"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ FOOTER ▓▓ -->
+<footer id="footer">
+  <div class="ft-main">
+    <div class="ft-brand">
+      <p class="ft-wordmark">KHALYL<em>2T6</em></p>
+      <p class="ft-tagline">TikTok Music Promotion Empire</p>
+    </div>
+    <div class="ft-cols">
+      <div class="ft-col">
+        <span class="ftc-head">Navigation</span>
+        <a href="#accounts">Accounts</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#booking">Book Now</a>
+      </div>
+      <div class="ft-col">
+        <span class="ftc-head">Connect</span>
+        <a href="https://www.tiktok.com/@khalyl2t6" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/khalyl2t6" target="_blank">Instagram</a>
+        <a href="mailto:khalylvfx@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© <span id="yr"></span> KHALYL2T6 — All Rights Reserved</span>
+    <span>khalylvfx@gmail.com</span>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="btt" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+</div><!-- /wrap -->
+<script src="script.js"></script>
+</body>
+</html>
